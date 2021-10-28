@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="Imagenes/Logo chico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://raw.github.com/daneden/animate.css/master/animate.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta name="description" content="Plataforma dirigida a lectores buscando recomendaciones o dejar reseñas.">
+    <meta name="keywords"  content="lectores, libros, reseñas, recomendaciones, biblioteca, seguimiento"> 
+    <title>Booker/La plataforma para lectores.</title>
+    <link rel="stylesheet" href="estilo/scss.css">
+</head>
+<body>
+    <header>
+      <h1 class="header_logo"> Booker </h1>
+      <div class="header_navbar">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: transparent;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="./Index.html">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="./MiBiblioteca.html">Mi Biblioteca</a>
+                <a class="nav-item nav-link" href="./Buscador.html">Buscador</a>
+                <a class="nav-item nav-link" href="./Comunidad.html">Comunidad</a>
+                <a class="nav-item nav-link" href="./Cuenta.html">Cuenta</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="header_frase">
+          <h2>Bienvenido a Booker</h2>
+          <h3>"Un lector vive mil vidas antes de morir. El que nunca lee solo vive una". George R.R. Martin</h3>
+      </div>
+    </header>
+    <div class="Main">
+        <section class="Main_info">
+            <img src="Imagenes/books 3.png" width="300px" alt="" class="libros wow animate__fadeInLeft"> 
+            <h4>Sobre Nosotros</h4>
+            <p>Booker es una plataforma para lectores, donde pods buscar libros, tener un seguimiento de tus lecturas y comunicarte con otors usuarios!</p>  
+            <button>Más información</button>  
+        </section>
+
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+          
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <section class="main_libro">
+                    <img src="Imagenes/RWRB.jpg" width="270px" alt="Red, White & Royal Blue" class="Libro"> 
+                    <h5>"Red, White & Royal Blue"</h5>
+                    <p>Una comedia romántica de gran corazón en la que el Primer Hijo Alex se enamora del Príncipe Henry de Gales después de un incidente de proporciones internacionales que los obliga a pretender ser los mejores amigos. Cuando la presidenta Claremont inicia su reelección, Alex se encuentra precipitándose en una relación secreta con Henry que podría descarrilar la campaña y derrotar a dos naciones.</p>
+                    <button>Más información</button>
+                </section>  
+              </div>
+              <div class="carousel-item">
+                <section class="main_libro">
+                    <img src="Imagenes/The Love hypothesis.jpg" width="270px" alt="The Love Hypothesis" class="Libro"> 
+                    <h5>"The Love Hypothesis"</h5>
+                    <p>Como candidata al doctorado de tercer año, Olive Smith no cree en las relaciones románticas duraderas, pero su mejor amiga sí, y eso es lo que la metió en esta situación. Convencer a Anh de que Olive está saliendo y que va camino de a tener sus felices por siempre, pero iba a requerir algo más que simples trucos mentales Jedi: los científicos requieren pruebas. Entonces, como cualquier biólogo que se precie, Olive entra en pánico y besa al primer hombre que ve.</p>
+                    <button>Más información</button>
+                </section>
+              </div>
+              <div class="carousel-item">
+                <section class="main_libro">
+                    <img src="Imagenes/pride and prejudice.jpg" width="270px" alt="Pride and Prejudice" class="Libro"> 
+                    <h5>"Pride and Prejudice"</h5>
+                    <p>La señora Bennet ha criado a sus cinco hijas con el único deseo de encontrar marido. La llegada al vecindario de Charles Bingley, un joven rico y soltero, despierta el interés de las hermanas Bennet, que verán una excelente oportunidad para cumplir su propósito. Elizabeth, una de las hijas de los Bennet, empezará una singular relación con Darcy, amigo de Bingley, que desencadenará esta historia de orgullo y prejuicios entre los dos hasta llegar a conocer el verdadero amor. </p>
+                    <button>Más información</button>
+                </section>  
+              </div>
+            </div>
+          
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+    </div>
+        
+<footer>
+    <ul>
+        <li class="nav-item"> <a class="nav-link" href=""> Sobre Nosotros </a></li>
+        <li class="nav-item"> <a class="nav-link" href=""> Seguridad y Privacidad </a></li>
+        <li class="nav-item"> <a class="nav-link" href=""> Ayuda </a></li>
+    </ul>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="js/wow.min.js"></script>
+<script>
+   new WOW().init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+main{
+    background-color: #f0f0f0;
+    height: 600px;
+    justify-content: space-around;
+    .main_actuales{
+        background-color: #f0f0f0;
+        color: #263636;
+        padding: 15px;
+        text-align: center;
+        height: 500px;  
+            h5{
+                color: #263636;
+                font-size: medium;
+                font-weight: bolder;
+            }
+                .CP{
+                    transition: all 1.5s;
+                }
+                    .CP:hover{
+                        transform: scale(1.20,1.20);
+                    }
+                        .WK{
+                            transition: all 1.5s;
+                        }
+                            .WK:hover{
+                                transform: scale(1.20,1.20);
+                            }   
+                                
+    }
+    .main_terminados{
+        background-color: #f0f0f0;
+        color: #263636;
+        padding: 15px;
+        text-align: center;
+        height: 500px;  
+            h5{
+                color: #263636;
+                font-size: medium;
+                font-weight: bolder;
+            }
+                .RWRB{
+                    transition: all 1.5s;
+                }
+                    .RWRB:hover{
+                        transform: scale(1.20,1.20);
+                    }
+                        .SaB{
+                            transition: all 1.5s;
+                        }
+                            .SaB:hover{
+                                transform: scale(1.20,1.20);
+                            } 
+                                .SaS{
+                                    transition: all 1.5s;
+                                }
+                                    .SaS:hover{
+                                        transform: scale(1.20,1.20);
+                                    }    
+
+    }
+    .main_porleer{
+        background-color: #f0f0f0;
+        color: #263636;
+        padding: 15px;
+        text-align: center;
+        height: 500px; 
+            h5{
+                color: #263636;
+                font-size: medium;
+                font-weight: bolder;
+            }
+                .RQ{
+                    transition: all 1.5s;
+                }
+                    .RQ:hover{
+                        transform: scale(1.20,1.20);
+                    }
+                        .TLH{
+                            transition: all 1.5s;
+                        }
+                            .TLH:hover{
+                                transform: scale(1.20,1.20);
+            }    
+
+    }
+}
