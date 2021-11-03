@@ -684,37 +684,63 @@ header form p button {
 
 .reseñas {
   padding: 25px;
-  height: 500px;
+  height: 800px;
   background-color: #f0f0f0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "titu titu" "resena1 resena2" "resena3 resena4";
+  -ms-grid-rows: 50px auto auto;
+      grid-template-rows: 50px auto auto;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.reseñas div {
-  width: 500px;
-  height: 200px;
+.reseñas h4 {
+  font-size: 40px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: titu;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
-.reseñas div h4 {
-  font-size: 20px;
+.reseñas .usuario1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: resena1;
 }
 
-.reseñas div p {
-  width: 400px;
+.reseñas .usuario2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: resena2;
+}
+
+.reseñas .usuario3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: resena3;
+}
+
+.reseñas .usuario4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: resena4;
+}
+
+.reseñas h3 {
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
   .reseñas {
-    height: 400px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
@@ -733,118 +759,27 @@ main {
   height: 600px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "nav nav nav" "libros libros libros";
 }
 
-main .main_actuales {
-  background-color: #f0f0f0;
-  color: #263636;
-  padding: 15px;
-  text-align: center;
-  height: 500px;
+main .nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: nav;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
-main .main_actuales h5 {
-  color: #263636;
-  font-size: medium;
-  font-weight: bolder;
-}
-
-main .main_actuales .CP {
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-}
-
-main .main_actuales .CP:hover {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-}
-
-main .main_actuales .WK {
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-}
-
-main .main_actuales .WK:hover {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-}
-
-main .main_terminados {
-  background-color: #f0f0f0;
-  color: #263636;
-  padding: 15px;
-  text-align: center;
-  height: 500px;
-}
-
-main .main_terminados h5 {
-  color: #263636;
-  font-size: medium;
-  font-weight: bolder;
-}
-
-main .main_terminados .RWRB {
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-}
-
-main .main_terminados .RWRB:hover {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-}
-
-main .main_terminados .SaB {
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-}
-
-main .main_terminados .SaB:hover {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-}
-
-main .main_terminados .SaS {
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-}
-
-main .main_terminados .SaS:hover {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-}
-
-main .main_porleer {
-  background-color: #f0f0f0;
-  color: #263636;
-  padding: 15px;
-  text-align: center;
-  height: 500px;
-}
-
-main .main_porleer h5 {
-  color: #263636;
-  font-size: medium;
-  font-weight: bolder;
-}
-
-main .main_porleer .RQ {
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-}
-
-main .main_porleer .RQ:hover {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-}
-
-main .main_porleer .TLH {
-  -webkit-transition: all 1.5s;
-  transition: all 1.5s;
-}
-
-main .main_porleer .TLH:hover {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
+main .Libros {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: libros;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 footer {

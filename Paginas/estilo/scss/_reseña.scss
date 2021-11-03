@@ -1,23 +1,40 @@
 .reseñas{
     padding: 25px;
-    height: 500px;
+    height: 800px;
     background-color: #f0f0f0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "titu titu"
+    "resena1 resena2"
+    "resena3 resena4";
+    grid-template-rows: 50px auto auto ;
+    grid-template-columns: auto auto;
     justify-content: space-around;
-        div{
-            width: 500px;
-            height: 200px;
-                h4{
-                    font-size: 20px;
-                }
-                    p{
-                        width: 400px;
-                    }
+    align-items: center;
+        h4{
+            font-size: 40px;
+            grid-area: titu;
+            justify-self: center;
         }
+            .usuario1{
+                grid-area: resena1;
+            }
+                .usuario2{
+                    grid-area: resena2;
+                }
+                    .usuario3{
+                        grid-area: resena3;
+                    }
+                        .usuario4{
+                            grid-area: resena4;
+                        }
+                            h3{
+                                font-weight: bold;
+                            }
+
             @media (max-width: 768px) {
-                height: 400px;
+            
                 justify-content: space-around;
                     div{
                         width: 250px;
