@@ -1,19 +1,24 @@
 main{
     background-color: #f0f0f0;
-    height: 600px;
-    justify-content: space-around;
-    display: grid;
-    grid-template-areas:
-    "nav nav nav"
-    "libros libros libros";
-        .nav{
-            grid-area: nav;
-            justify-self: center;
-            
-        }
-            .Libros{
-                grid-area: libros;
-                justify-self: center;
+    @import "libros";  
+}
+header{
+    .nav{
+        grid-area: buscador;
+        padding: 15px;
+        color: #214942;
+        justify-content: space-around;
+        font-size: 23px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            a:hover{
+                color: #83a193;
+                font-weight: bold;
             }
-            
+                a{
+                    text-decoration: none;
+                    color: #f0f0f0;
+                }
+    }
+
+    
 }

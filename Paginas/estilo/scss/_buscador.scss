@@ -50,18 +50,17 @@ header{
 
 .section_generos{
     padding: 25px;
-    height: 500px;
-    background-color:#83a193;
+    background-color: #f0f0f0;
     display: grid;
     grid-template-areas: 
-    "tit tit"
-    "romance fantasia"
-    "terror ciencia"
-    "poesia clasicos";
-    grid-template-columns: auto auto;
+    "tit tit tit"
+    "aventura fantasia romance"
+    "terror ciencia comedia"
+    "poesia clasicos misterio";
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto;
-    justify-content: center;
-    column-gap: 5px;
+    justify-content: space-evenly;
+    row-gap: 15px;
             button{
                 border-radius: 20px;
                 width: 300px;
@@ -93,6 +92,15 @@ header{
                                         .clasicos{
                                             grid-area: clasicos;
                                         }
+                                            .aventura{
+                                                grid-area: aventura;
+                                            }
+                                                .misterio{
+                                                    grid-area: misterio;
+                                                }
+                                                    .comedia{
+                                                        grid-area: comedia;
+                                                    }
                 h5{
                     grid-area: tit;
                     text-transform: capitalize;

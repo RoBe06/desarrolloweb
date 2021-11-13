@@ -1,0 +1,33 @@
+.sobreNosotros{
+    background-image: url("../../imagenes/fondo.png");
+    background-size: cover;
+    height: 600px;
+    padding: 25px;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-areas:
+     "titulo titulo titulo titulo"
+     "buscador biblioteca resena chats";
+     grid-template-columns: 300px 300px 300px 300px;
+     grid-template-rows: 100px 500px;
+            h4{
+                grid-area: titulo;
+                text-align: center;
+                font-size: 30px;
+                font-weight: bolder;
+                color: #263636;
+            }
+                .buscador{
+                    grid-area: buscador;
+                }
+                    .biblioteca{
+                        grid-area: biblioteca;
+                    }
+                        .resena{
+                            grid-area: resena;
+                        }
+                            .chats{
+                                grid-area: chats;
+                            }
+                        
+}

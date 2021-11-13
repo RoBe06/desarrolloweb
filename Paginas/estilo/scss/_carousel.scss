@@ -1,0 +1,130 @@
+
+.recomendaciones{
+    padding: 20px;
+    background-color: #f0f0f0;
+        h4{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bolder;
+            color: #263636;
+        }
+}
+
+.main_libro{
+    background-color: #f0f0f0;
+    height: 500px;
+    padding: 25px;
+    display: grid;
+    grid-template-areas:
+    "nomb nomb libro"
+    "sino sino libro"
+    "boto boto libro";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+      
+        .Libro{
+            grid-area: libro;
+            align-self: center;
+                justify-self: left;
+                transition: all 1.5s;
+        }
+            .Libro:hover{
+                transform: scale(1.1,1.1);    
+            }
+                    h5{
+                        grid-area: nomb;
+                        color: #263636;
+                        font-size: 25px;
+                        font-weight: bolder;
+                        align-self: end;
+                        justify-self: center;
+                    }
+                        p{
+                            grid-area: sino;
+                            color: #263636;
+                            font-size: 20px;
+                            width: 600px;
+                            line-height: 1cm;
+                            text-align: justify;
+                            justify-self: center;
+                        }
+                            button{
+                                grid-area: boto;
+                                width: 200px;
+                                height: 50px;
+                                border-radius: 20px;
+                                align-self: start;
+                                justify-self: center;
+                                font-weight: bolder;
+                                color: #f0f0f0;
+                                background-color: #214942;
+                                transition: all 1.5s;
+                            }   
+                                button:hover{
+                                        transform: scale(1.2,1.2);
+                                }
+    }
+
+    @media (max-width: 768px) {
+
+        .main_libro{
+            background-color: #83a193;
+            height: 400px;
+            padding: 25px;
+            display: grid;
+            grid-template-areas:
+            "nomb nomb libro"
+            "sino sino libro"
+            "sino sino boto";
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto;
+            justify-content: space-evenly;
+            align-items: center;
+                .Libro{
+                    width: 180px;
+                    grid-area: libro;
+                    align-self: center;
+                        justify-self: left;
+                        transition: all 1.5s;
+                }
+                    .Libro:hover{
+                        transform: scale(1.1,1.1);    
+                    }
+                            h5{
+                                grid-area: nomb;
+                                color: #f0f0f0;
+                                font-size: 25px;
+                                font-weight: bolder;
+                                align-self: end;
+                                justify-self: center;
+                            }
+                                p{
+                                    grid-area: sino;
+                                    color: #f0f0f0;
+                                    font-size: 15px;
+                                    width: 450px;
+                                    line-height: 1cm;
+                                    text-align: justify;
+                                    justify-self: center;
+                                }
+                                    button{
+                                        grid-area: boto;
+                                        width: 150px;
+                                        height: 40px;
+                                        border-radius: 20px;
+                                        align-self: start;
+                                        justify-self: center;
+                                        font-weight: bolder;
+                                        color: #f0f0f0;
+                                        background-color: #214942;
+                                        transition: all 1.5s;
+                                    }   
+                                        button:hover{
+                                                transform: scale(1.2,1.2);
+                                        }
+            }
+}
+
+
