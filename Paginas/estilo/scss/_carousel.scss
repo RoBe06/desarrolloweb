@@ -127,4 +127,61 @@
             }
 }
 
+@media (max-width: 576px) {
 
+    .main_libro{
+        background-color: #83a193;
+        height: 570px;
+        padding: 18px;
+        display: grid;
+        grid-template-areas:
+        "libro nomb nomb"
+        "libro boto boto"
+        "sino sino sino";
+        grid-template-rows: 100px auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        align-items: center;
+            .Libro{
+                width: 130px;
+                grid-area: libro;
+                align-self: center;
+                    justify-self: left;
+                    transition: all 1.5s;
+            }
+                .Libro:hover{
+                    transform: scale(1.1,1.1);    
+                }
+                        h5{
+                            grid-area: nomb;
+                            color: #f0f0f0;
+                            font-size: 20px;
+                            font-weight: bolder;
+                            align-self: center;
+                            justify-self: center;
+                        }
+                            p{
+                                grid-area: sino;
+                                color: #f0f0f0;
+                                font-size: 15px;
+                                width: 450px;
+                                text-align: justify;
+                                justify-self: center;
+                            }
+                                button{
+                                    grid-area: boto;
+                                    width: 150px;
+                                    height: 40px;
+                                    border-radius: 10px;
+                                    align-self: center;
+                                    justify-self: center;
+                                    font-weight: bolder;
+                                    color: #f0f0f0;
+                                    background-color: #214942;
+                                    transition: all 1.5s;
+                                }   
+                                    button:hover{
+                                            transform: scale(1.2,1.2);
+                                    }
+        }
+}

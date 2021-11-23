@@ -358,6 +358,87 @@ Header .header_frase h3 {
   }
 }
 
+@media (max-width: 576px) {
+  .Main .main_libro {
+    background-color: #83a193;
+    height: 570px;
+    padding: 18px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "libro nomb nomb" "libro boto boto" "sino sino sino";
+    -ms-grid-rows: 100px auto auto;
+        grid-template-rows: 100px auto auto;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Main .main_libro .Libro {
+    width: 130px;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+    grid-area: libro;
+    -ms-flex-item-align: center;
+        align-self: center;
+        justify-self: left;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+  }
+  .Main .main_libro .Libro:hover {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  .Main .main_libro h5 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: nomb;
+    color: #f0f0f0;
+    font-size: 20px;
+    font-weight: bolder;
+    -ms-flex-item-align: center;
+        align-self: center;
+        justify-self: center;
+  }
+  .Main .main_libro p {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: sino;
+    color: #f0f0f0;
+    font-size: 15px;
+    width: 450px;
+    text-align: justify;
+        justify-self: center;
+  }
+  .Main .main_libro button {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: boto;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    -ms-flex-item-align: center;
+        align-self: center;
+        justify-self: center;
+    font-weight: bolder;
+    color: #f0f0f0;
+    background-color: #214942;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+  }
+  .Main .main_libro button:hover {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+}
+
 @media (max-width: 768px) {
   .Main .Main_info {
     height: 400px;
@@ -421,17 +502,18 @@ Header .header_frase h3 {
     -webkit-transform: scale(1.2, 1.2);
             transform: scale(1.2, 1.2);
   }
-  .Main .main_libro {
-    background-color: #83a193;
+}
+
+@media (max-width: 576px) {
+  .Main .Main_info {
     height: 400px;
     padding: 25px;
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "nomb nomb libro" "sino sino libro" "sino sino boto";
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
+        grid-template-areas: "foto tit tit" "foto info info" "foto boton boton";
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    grid-row: auto auto auto;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -439,64 +521,49 @@ Header .header_frase h3 {
         -ms-flex-align: center;
             align-items: center;
   }
-  .Main .main_libro .Libro {
-    width: 180px;
+  .Main .Main_info .libros {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
-    -ms-grid-column: 3;
-    grid-area: libro;
-    -ms-flex-item-align: center;
-        align-self: center;
-        justify-self: left;
-    -webkit-transition: all 1.5s;
-    transition: all 1.5s;
+    -ms-grid-column: 1;
+    grid-area: foto;
+    width: 150px;
   }
-  .Main .main_libro .Libro:hover {
-    -webkit-transform: scale(1.1, 1.1);
-            transform: scale(1.1, 1.1);
-  }
-  .Main .main_libro h5 {
+  .Main .Main_info h4 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: nomb;
-    color: #f0f0f0;
+    -ms-grid-column-span: 3;
+    grid-area: tit;
     font-size: 25px;
     font-weight: bolder;
     -ms-flex-item-align: end;
         align-self: end;
-        justify-self: center;
   }
-  .Main .main_libro p {
+  .Main .Main_info p {
     -ms-grid-row: 2;
-    -ms-grid-column: 1;
+    -ms-grid-column: 2;
     -ms-grid-column-span: 2;
-    grid-area: sino;
-    color: #f0f0f0;
+    grid-area: info;
     font-size: 15px;
-    width: 450px;
+    width: 400px;
     line-height: 1cm;
-    text-align: justify;
-        justify-self: center;
   }
-  .Main .main_libro button {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: boto;
+  .Main .Main_info button {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: boton;
     width: 150px;
     height: 40px;
     border-radius: 20px;
     -ms-flex-item-align: start;
         align-self: start;
-        justify-self: center;
+        justify-self: left;
     font-weight: bolder;
     color: #f0f0f0;
     background-color: #214942;
     -webkit-transition: all 1.5s;
     transition: all 1.5s;
   }
-  .Main .main_libro button:hover {
+  .Main .Main_info button:hover {
     -webkit-transform: scale(1.2, 1.2);
             transform: scale(1.2, 1.2);
   }
@@ -610,6 +677,60 @@ main form input[type="submit"]:hover {
 
 main form h4 {
   text-align: center;
+}
+
+@media (min-width: 576px) {
+  main {
+    height: 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main form {
+    width: 300px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+  }
+  main form label {
+    width: 83px;
+    font-weight: bold;
+    display: inline-block;
+  }
+  main form input[type="text"],
+  main form input[type="email"],
+  main form input[type="password"] {
+    width: 180px;
+    padding: 3px 10px;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+    margin: 8px 0;
+    display: inline-block;
+  }
+  main form input[type="submit"] {
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 32px;
+    border: 1px solid #214942;
+    border-radius: 5px;
+    display: block;
+    color: #f0f0f0;
+    background-color: #263636;
+  }
+  main form input[type="submit"]:hover {
+    cursor: pointer;
+  }
+  main form h4 {
+    text-align: center;
+  }
 }
 
 header form {
@@ -748,6 +869,169 @@ header form p button {
   grid-area: ck;
 }
 
+@media (max-width: 768px) {
+  .section_libros {
+    color: #263636;
+    padding: 25px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "rwrb ss" "sas sab" "soc ck";
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    row-gap: 20px;
+  }
+  .section_libros h5 {
+    font-size: 13px;
+  }
+  .section_libros p {
+    font-size: 13px;
+  }
+  .section_libros .boton {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-column-align: left;
+        justify-self: left;
+    font-weight: bolder;
+    color: #f0f0f0;
+    background-color: #214942;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+  }
+  .section_libros boton:hover {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+  .section_libros .rwrb {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: rwrb;
+  }
+  .section_libros .ss {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: ss;
+  }
+  .section_libros .sas {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: sas;
+  }
+  .section_libros .sab {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: sab;
+  }
+  .section_libros .soc {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: soc;
+  }
+  .section_libros .ck {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: ck;
+  }
+  .section_libros .estrellas {
+    width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section_libros {
+    color: #263636;
+    padding: 25px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "rwrb ss" "sas sab" "soc ck";
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    row-gap: 20px;
+  }
+  .section_libros h5 {
+    font-size: 13px;
+  }
+  .section_libros p {
+    font-size: 13px;
+  }
+  .section_libros .boton {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-column-align: left;
+        justify-self: left;
+    font-weight: bolder;
+    color: #f0f0f0;
+    background-color: #214942;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+  }
+  .section_libros boton:hover {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+  .section_libros .rwrb {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: rwrb;
+  }
+  .section_libros .ss {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: ss;
+  }
+  .section_libros .sas {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: sas;
+  }
+  .section_libros .sab {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: sab;
+  }
+  .section_libros .soc {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: soc;
+  }
+  .section_libros .ck {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: ck;
+  }
+  .section_libros .ck .crooked {
+    height: 378.86px;
+  }
+  .section_libros .estrellas {
+    width: 100px;
+  }
+}
+
 .section_generos {
   padding: 25px;
   background-color: #f0f0f0;
@@ -846,6 +1130,162 @@ header form p button {
   font-weight: bolder;
 }
 
+@media (max-width: 768px) {
+  .section_generos {
+    padding: 25px;
+    background-color: #f0f0f0;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "tit tit" "aventura fantasia" "terror ciencia" "poesia clasicos" "misterio comedia" "romance";
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -ms-grid-rows: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    row-gap: 15px;
+  }
+  .section_generos button {
+    border-radius: 20px;
+    width: 200px;
+    height: 100px;
+    background-color: #214942;
+    color: #f0f0f0;
+    font-size: 20px;
+    font-weight: bolder;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+  }
+  .section_generos button:hover {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+  .section_generos .romance {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: romance;
+  }
+  .section_generos .fantasia {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: fantasia;
+  }
+  .section_generos .terror {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: terror;
+  }
+  .section_generos .ciencia {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: ciencia;
+  }
+  .section_generos .poesia {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: poesia;
+  }
+  .section_generos .clasicos {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: clasicos;
+  }
+  .section_generos .aventura {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: aventura;
+  }
+  .section_generos .misterio {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: misterio;
+  }
+  .section_generos .comedia {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: comedia;
+  }
+}
+
+@media (max-width: 576px) {
+  .section_generos {
+    padding: 25px;
+    background-color: #f0f0f0;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "tit tit" "aventura fantasia" "terror ciencia" "poesia clasicos" "misterio comedia" "romance";
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -ms-grid-rows: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    row-gap: 15px;
+  }
+  .section_generos button {
+    border-radius: 20px;
+    width: 150px;
+    height: 100px;
+    background-color: #214942;
+    color: #f0f0f0;
+    font-size: 20px;
+    font-weight: bolder;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+  }
+  .section_generos button:hover {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+  .section_generos .romance {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: romance;
+  }
+  .section_generos .fantasia {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: fantasia;
+  }
+  .section_generos .terror {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: terror;
+  }
+  .section_generos .ciencia {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: ciencia;
+  }
+  .section_generos .poesia {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: poesia;
+  }
+  .section_generos .clasicos {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: clasicos;
+  }
+  .section_generos .aventura {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: aventura;
+  }
+  .section_generos .misterio {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: misterio;
+  }
+  .section_generos .comedia {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: comedia;
+  }
+}
+
 .reseñas {
   padding: 25px;
   height: 800px;
@@ -904,16 +1344,119 @@ header form p button {
 
 @media (max-width: 768px) {
   .reseñas {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    padding: 25px;
+    margin-bottom: 370px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "titu" "resena1" "resena2" "resena3" "resena4";
+    -ms-grid-rows: 50px auto auto auto auto auto;
+        grid-template-rows: 50px auto auto auto auto auto;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .reseñas div {
-    width: 250px;
-    height: 100px;
+  .reseñas h4 {
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: titu;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
-  .reseñas div p {
-    width: 300px;
+  .reseñas .usuario1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: resena1;
+  }
+  .reseñas .usuario2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: resena2;
+  }
+  .reseñas .usuario3 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: resena3;
+  }
+  .reseñas .usuario4 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: resena4;
+  }
+  .reseñas h3 {
+    font-size: 20px;
+  }
+  .reseñas p {
     font-size: 15px;
+  }
+  .reseñas h5 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .reseñas {
+    padding: 25px;
+    margin-bottom: 900px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "titu" "resena1" "resena2" "resena3" "resena4";
+    -ms-grid-rows: 50px auto auto auto auto auto;
+        grid-template-rows: 50px auto auto auto auto auto;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .reseñas h4 {
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: titu;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .reseñas .usuario1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: resena1;
+  }
+  .reseñas .usuario2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: resena2;
+  }
+  .reseñas .usuario3 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: resena3;
+  }
+  .reseñas .usuario4 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: resena4;
+  }
+  .reseñas .resena {
+    width: 500px;
+  }
+  .reseñas .resena h3 {
+    font-size: 20px;
+  }
+  .reseñas .resena p {
+    font-size: 15px;
+  }
+  .reseñas .resena h5 {
+    font-size: 15px;
+  }
+  .reseñas .resena img {
+    width: 150px;
   }
 }
 
@@ -1110,6 +1653,94 @@ header form p button {
   }
 }
 
+@media (max-width: 576px) {
+  .main_libro {
+    background-color: #83a193;
+    height: 570px;
+    padding: 18px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "libro nomb nomb" "libro boto boto" "sino sino sino";
+    -ms-grid-rows: 100px auto auto;
+        grid-template-rows: 100px auto auto;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main_libro .Libro {
+    width: 130px;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: libro;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: left;
+        justify-self: left;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+  }
+  .main_libro .Libro:hover {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  .main_libro h5 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: nomb;
+    color: #f0f0f0;
+    font-size: 20px;
+    font-weight: bolder;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .main_libro p {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: sino;
+    color: #f0f0f0;
+    font-size: 15px;
+    width: 450px;
+    text-align: justify;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .main_libro button {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: boto;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    font-weight: bolder;
+    color: #f0f0f0;
+    background-color: #214942;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+  }
+  .main_libro button:hover {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+}
+
 main {
   background-color: #f0f0f0;
 }
@@ -1188,6 +1819,169 @@ main .section_libros .ck {
   grid-area: ck;
 }
 
+@media (max-width: 768px) {
+  main .section_libros {
+    color: #263636;
+    padding: 25px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "rwrb ss" "sas sab" "soc ck";
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    row-gap: 20px;
+  }
+  main .section_libros h5 {
+    font-size: 13px;
+  }
+  main .section_libros p {
+    font-size: 13px;
+  }
+  main .section_libros .boton {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-column-align: left;
+        justify-self: left;
+    font-weight: bolder;
+    color: #f0f0f0;
+    background-color: #214942;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+  }
+  main .section_libros boton:hover {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+  main .section_libros .rwrb {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: rwrb;
+  }
+  main .section_libros .ss {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: ss;
+  }
+  main .section_libros .sas {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: sas;
+  }
+  main .section_libros .sab {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: sab;
+  }
+  main .section_libros .soc {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: soc;
+  }
+  main .section_libros .ck {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: ck;
+  }
+  main .section_libros .estrellas {
+    width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  main .section_libros {
+    color: #263636;
+    padding: 25px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "rwrb ss" "sas sab" "soc ck";
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    row-gap: 20px;
+  }
+  main .section_libros h5 {
+    font-size: 13px;
+  }
+  main .section_libros p {
+    font-size: 13px;
+  }
+  main .section_libros .boton {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-column-align: left;
+        justify-self: left;
+    font-weight: bolder;
+    color: #f0f0f0;
+    background-color: #214942;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+  }
+  main .section_libros boton:hover {
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+  }
+  main .section_libros .rwrb {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: rwrb;
+  }
+  main .section_libros .ss {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: ss;
+  }
+  main .section_libros .sas {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: sas;
+  }
+  main .section_libros .sab {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: sab;
+  }
+  main .section_libros .soc {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: soc;
+  }
+  main .section_libros .ck {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: ck;
+  }
+  main .section_libros .ck .crooked {
+    height: 378.86px;
+  }
+  main .section_libros .estrellas {
+    width: 100px;
+  }
+}
+
 header .nav {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -1211,6 +2005,7 @@ header .nav a {
 }
 
 footer {
+  grid-area: footer;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #214942;
   -webkit-box-pack: center;
@@ -1252,13 +2047,5 @@ footer .mas {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-@media (max-width: 600px) {
-  body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 /*# sourceMappingURL=scss.css.map */

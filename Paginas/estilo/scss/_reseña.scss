@@ -32,16 +32,106 @@
                                 font-weight: bold;
                             }
 
-            @media (max-width: 768px) {
             
-                justify-content: space-around;
-                    div{
-                        width: 250px;
-                        height: 100px;
-                            p{
-                                width: 300px;
-                                font-size: 15px;
+}
+
+@media (max-width: 768px) {
+                .reseñas{
+                    padding: 25px;
+                    margin-bottom: 370px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    display: grid;
+                    grid-template-areas: 
+                    "titu"
+                    "resena1"
+                    "resena2"
+                    "resena3"
+                    "resena4";
+                    grid-template-rows: 50px auto auto auto auto auto;
+                    grid-template-columns: auto;
+                   
+                    align-items: center;
+                        h4{
+                            font-size: 40px;
+                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                            grid-area: titu;
+                            justify-self: center;
+                        }
+                            .usuario1{
+                                grid-area: resena1;
                             }
-                    }
+                                .usuario2{
+                                    grid-area: resena2;
+                                }
+                                    .usuario3{
+                                        grid-area: resena3;
+                                    }
+                                        .usuario4{
+                                            grid-area: resena4;
+                                        }
+                                            h3{
+                                                
+                                                font-size: 20px;
+                                            } 
+                                                p{
+                                                    font-size: 15px;
+                                                }  
+                                                    h5{
+                                                        font-size: 15px;
+                                                    }             
+                
             }
+    }
+
+    @media (max-width: 576px) {
+        .reseñas{
+            padding: 25px;
+            margin-bottom: 900px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display: grid;
+            grid-template-areas: 
+            "titu"
+            "resena1"
+            "resena2"
+            "resena3"
+            "resena4";
+            grid-template-rows: 50px auto auto auto auto auto;
+            grid-template-columns: auto;
+           
+            align-items: center;
+                h4{
+                    font-size: 40px;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    grid-area: titu;
+                    justify-self: center;
+                }
+                    .usuario1{
+                        grid-area: resena1;
+                    }
+                        .usuario2{
+                            grid-area: resena2;
+                        }
+                            .usuario3{
+                                grid-area: resena3;
+                            }
+                                .usuario4{
+                                    grid-area: resena4;
+                                }
+                                .resena{
+                                    width: 500px;
+                                            h3{
+                                                font-size: 20px;                                               
+                                            } 
+                                                p{
+                                                    font-size: 15px;                                              
+                                                }  
+                                                    h5{
+                                                        font-size: 15px;                                                   
+                                                    }   
+                                                        img{
+                                                            width: 150px;                                                           
+                                                        }      
+                                }
+                                                                                                                                         
+    }
 }

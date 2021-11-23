@@ -108,4 +108,124 @@ header{
                     text-align: center; 
                     font-weight: bolder;
                 }
+
+}  
+            @media (max-width: 768px) {
+                    .section_generos{
+                        padding: 25px;
+                        background-color: #f0f0f0;
+                        display: grid;
+                        grid-template-areas: 
+                        "tit tit"
+                        "aventura fantasia"
+                        "terror ciencia"
+                        "poesia clasicos"
+                        "misterio comedia"
+                        "romance";
+                        grid-template-columns: auto auto;
+                        grid-template-rows: auto auto auto auto auto auto;
+                        justify-content: space-evenly;
+                        row-gap: 15px;
+                                button{
+                                    border-radius: 20px;
+                                    width: 200px;
+                                    height: 100px;
+                                    background-color: #214942;
+                                    color: #f0f0f0;
+                                    font-size: 20px;
+                                    font-weight: bolder;
+                                    transition: all 1.5s;
+                                }
+                                    button:hover{
+                                                 transform: scale(1.2,1.2);
+                                     }
+                                        .romance{
+                                            grid-area: romance;
+                                        }
+                                            .fantasia{
+                                                grid-area: fantasia;
+                                            }
+                                                .terror{
+                                                    grid-area: terror;
+                                                }
+                                                    .ciencia{
+                                                        grid-area: ciencia;
+                                                    }
+                                                        .poesia{
+                                                            grid-area: poesia;
+                                                        }
+                                                            .clasicos{
+                                                                grid-area: clasicos;
+                                                            }
+                                                                .aventura{
+                                                                    grid-area: aventura;
+                                                                }
+                                                                    .misterio{
+                                                                        grid-area: misterio;
+                                                                    }
+                                                                        .comedia{
+                                                                            grid-area: comedia;
+                                                                        }
+                }
+
     }
+
+    @media (max-width: 576px) {
+        .section_generos{
+            padding: 25px;
+            background-color: #f0f0f0;
+            display: grid;
+            grid-template-areas: 
+            "tit tit"
+            "aventura fantasia"
+            "terror ciencia"
+            "poesia clasicos"
+            "misterio comedia"
+            "romance";
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto auto auto auto;
+            justify-content: space-evenly;
+            row-gap: 15px;
+                    button{
+                        border-radius: 20px;
+                        width: 150px;
+                        height: 100px;
+                        background-color: #214942;
+                        color: #f0f0f0;
+                        font-size: 20px;
+                        font-weight: bolder;
+                        transition: all 1.5s;
+                    }
+                        button:hover{
+                                     transform: scale(1.2,1.2);
+                         }
+                            .romance{
+                                grid-area: romance;
+                            }
+                                .fantasia{
+                                    grid-area: fantasia;
+                                }
+                                    .terror{
+                                        grid-area: terror;
+                                    }
+                                        .ciencia{
+                                            grid-area: ciencia;
+                                        }
+                                            .poesia{
+                                                grid-area: poesia;
+                                            }
+                                                .clasicos{
+                                                    grid-area: clasicos;
+                                                }
+                                                    .aventura{
+                                                        grid-area: aventura;
+                                                    }
+                                                        .misterio{
+                                                            grid-area: misterio;
+                                                        }
+                                                            .comedia{
+                                                                grid-area: comedia;
+                                                            }
+    }
+
+}
